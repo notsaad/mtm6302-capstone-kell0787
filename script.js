@@ -1,4 +1,4 @@
-
+// Function to open the modal with populated data
 function openModal(pokemonName, imageSrc, type, weight, height, moves, description, stats) {
     // Populate modal content
     document.getElementById("modalPokemonName").textContent = pokemonName;
@@ -19,13 +19,17 @@ function openModal(pokemonName, imageSrc, type, weight, height, moves, descripti
     });
 
     // Display the modal
-    document.getElementById("pokemonModal").style.display = "block";
+    const modal = document.querySelector('.modal');
+    modal.style.display = 'flex';
 }
 
 // Function to close the modal
 function closeModal() {
-    document.getElementById("pokemonModal").style.display = "none";
+    const modal = document.querySelector('.modal');
+    modal.style.display = 'none';
 }
+
+document.querySelector('.close-button').onclick = closeModal;
 
 
 document.querySelectorAll('.pokemon-card').forEach(card => {
@@ -47,4 +51,3 @@ document.querySelectorAll('.pokemon-card').forEach(card => {
         ]
     );
 });
-

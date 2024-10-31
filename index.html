@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://use.typekit.net/veu7apn.css">
+    <title>Pokedex</title>
+</head>
+<body>
+    <header>
+        <!-- Logo and Search Area -->
+        <div class="navbar">
+            <img src="/images/pokelogo.png" alt="Pokedex Logo" class="logo">
+            <div class="search-bar">
+                <input type="text" id="search" placeholder="Search">
+                <button id="searchButton">
+                    <img id="searchIcon" src="/images/hashtag-solid.svg" alt="Search by Number">
+                </button>
+            </div>
+            <div class="filter-options">
+                <label>Sort by:</label>
+                <div>
+                    <input type="radio" id="filterNumber" name="filter" value="number" checked>
+                    <label for="filterNumber">Number</label>
+                </div>
+                <div>
+                    <input type="radio" id="filterName" name="filter" value="name">
+                    <label for="filterName">Name</label>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- HEADING -->
+    <div class="pokedex-heading">
+        <h2>View the Pokédex</h2>
+    </div>
+    
+    <main>
+    <!-- Pokémon Grid Section -->
+    <div class="pokemon-grid">
+        <!-- Example Pokémon cards, repeat similar structure for each Pokémon -->
+        <div class="pokemon-card" onclick="openDetailsPage('clefairy', 35)">
+            <img src="images/clefairy.png" alt="Clefairy">
+            <span class="pokemon-number">#000</span>
+            <h3>Clefairy</h3>
+        </div>
+
+        <div class="pokemon-card" onclick="openDetailsPage('combee', 1)">
+            <img src="images/combee.png" alt="Combee">
+            <span class="pokemon-number">#000</span>
+            <h3>Combee</h3>
+        </div>
+
+        <div class="pokemon-card" onclick="openDetailsPage('cherubi', 2)">
+            <img src="images/cherubi.png" alt="Cherubi">
+            <span class="pokemon-number">#000</span>
+            <h3>Cherubi</h3>
+        </div>
+
+        <div class="pokemon-card" onclick="openDetailsPage('cresselia', 3)">
+            <img src="images/cresselia.png" alt="Cresselia">
+            <span class="pokemon-number">#000</span>
+            <h3>Cresselia</h3>
+        </div>
+
+        <div class="pokemon-card" onclick="openDetailsPage('goldeen', 4)">
+            <img src="images/goldeen.png" alt="Goldeen">
+            <span class="pokemon-number">#000</span>
+            <h3>Goldeen</h3>
+        </div>
+
+        <div class="pokemon-card" onclick="openDetailsPage('lopunny', 5)">
+            <img src="images/lopunny.png" alt="Lopunny">
+            <span class="pokemon-number">#000</span>
+            <h3>Lopunny</h3>
+        </div>
+
+        <div class="pokemon-card" onclick="openDetailsPage('meganium', 6)">
+            <img src="images/meganium.png" alt="Meganium">
+            <span class="pokemon-number">#000</span>
+            <h3>Meganium</h3>
+        </div>
+        
+        <div class="pokemon-card" onclick="openDetailsPage('clefairy', 35)">
+            <img src="images/clefairy.png" alt="Clefairy">
+            <span class="pokemon-number">#000</span>
+            <h3>Clefairy</h3>
+        </div>
+
+        <div class="pokemon-card" onclick="openDetailsPage('combee', 1)">
+            <img src="images/combee.png" alt="Combee">
+            <span class="pokemon-number">#000</span>
+            <h3>Combee</h3>
+        </div>
+
+        <div class="pokemon-card" onclick="openDetailsPage('cherubi', 2)">
+            <img src="images/cherubi.png" alt="Cherubi">
+            <span class="pokemon-number">#000</span>
+            <h3>Cherubi</h3>
+        </div>
+
+        <div class="pokemon-card" onclick="openDetailsPage('cresselia', 3)">
+            <img src="images/cresselia.png" alt="Cresselia">
+            <span class="pokemon-number">#000</span>
+            <h3>Cresselia</h3>
+        </div>
+
+        <div class="pokemon-card" onclick="openDetailsPage('goldeen', 4)">
+            <img src="images/goldeen.png" alt="Goldeen">
+            <span class="pokemon-number">#000</span>
+            <h3>Goldeen</h3>
+        </div>
+
+        <div class="pokemon-card" onclick="openDetailsPage('lopunny', 5)">
+            <img src="images/lopunny.png" alt="Lopunny">
+            <span class="pokemon-number">#000</span>
+            <h3>Lopunny</h3>
+        </div>
+
+        <div class="pokemon-card" onclick="openDetailsPage('meganium', 6)">
+            <img src="images/meganium.png" alt="Meganium">
+            <span class="pokemon-number">#000</span>
+            <h3>Meganium</h3>
+        </div>
+        
+        <div class="pokemon-card" onclick="openDetailsPage('clefairy', 35)">
+            <img src="images/clefairy.png" alt="Clefairy">
+            <span class="pokemon-number">#000</span>
+            <h3>Clefairy</h3>
+        </div>
+
+        <div class="pokemon-card" onclick="openDetailsPage('combee', 1)">
+            <img src="images/combee.png" alt="Combee">
+            <span class="pokemon-number">#000</span>
+            <h3>Combee</h3>
+        </div>
+
+        <div class="pokemon-card" onclick="openDetailsPage('cherubi', 2)">
+            <img src="images/cherubi.png" alt="Cherubi">
+            <span class="pokemon-number">#000</span>
+            <h3>Cherubi</h3>
+        </div>
+
+        <div class="pokemon-card" onclick="openDetailsPage('cresselia', 3)">
+            <img src="images/cresselia.png" alt="Cresselia">
+            <span class="pokemon-number">#000</span>
+            <h3>Cresselia</h3>
+        </div>
+
+        <div class="pokemon-card" onclick="openDetailsPage('goldeen', 4)">
+            <img src="images/goldeen.png" alt="Goldeen">
+            <span class="pokemon-number">#000</span>
+            <h3>Goldeen</h3>
+        </div>
+
+        <div class="pokemon-card" onclick="openDetailsPage('lopunny', 5)">
+            <img src="images/lopunny.png" alt="Lopunny">
+            <span class="pokemon-number">#000</span>
+            <h3>Lopunny</h3>
+        </div>
+        
+       <!-- "More" Button -->
+       <div class="load-more">
+        <button onclick="loadMorePokemon()">More</button>
+    </div>
+        
+</main>
+
+    <!-- Pokémon Details Modal -->
+<div id="pokemonModal" class="modal">
+    <div class="modal-content">
+        <span class="close-button" onclick="closeModal()">×</span>
+        <h1 id="modalPokemonName">Clefairy</h1>
+        <img id="modalPokemonImage" src="images/clefairy.png" alt="Clefairy">
+        <span class="pokemon-type">Fairy</span>
+
+        <h2>About</h2>
+        <div class="pokemon-info">
+            <div><strong>Weight:</strong> <span id="modalPokemonWeight">16.5 lbs</span></div>
+            <div><strong>Height:</strong> <span id="modalPokemonHeight">0.6m</span></div>
+            <div><strong>Moves:</strong> <span id="modalPokemonMoves">Cute Charm, Magic Guard</span></div>
+        </div>
+
+        <p id="modalPokemonDescription">On nights with a full moon, Clefairy gather from all over and dance. Bathing in moonlight makes them float.</p>
+
+        <h2>Base Stats</h2>
+        <div id="modalPokemonStats" class="pokemon-stats">
+            <!-- Stat bars will be populated dynamically -->
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

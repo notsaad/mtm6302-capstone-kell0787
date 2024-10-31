@@ -10,7 +10,7 @@ function openModal(pokemonName, imageSrc, type, weight, height, moves, descripti
 
     // Populate stats
     const statsContainer = document.getElementById("modalPokemonStats");
-    statsContainer.innerHTML = ""; // Clear previous stats
+    statsContainer.innerHTML = ""; 
     stats.forEach(stat => {
         const statDiv = document.createElement("div");
         statDiv.innerHTML = `<strong>${stat.name}</strong>

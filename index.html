@@ -15,7 +15,7 @@
             <div class="search-bar">
                 <input type="text" id="search" placeholder="Search">
                 <button id="searchButton">
-                    <img id="searchIcon" src="/images/hashtag-solid.svg" alt="Search by Number">
+                    <img id="searchIcon" src="/images/hashtag-solid.svg" alt="Sort by Number">
                 </button>
             </div>
             <div class="filter-options">
@@ -30,169 +30,58 @@
                 </div>
             </div>
         </div>
+        <button id="viewFavorites" class="icon-button">
+            <img src="images/star-solid.svg" alt="View Favourites" />
+        </button>
     </header>
 
     <!-- HEADING -->
     <div class="pokedex-heading">
-        <h2>View the Pokédex</h2>
+        <h2 id="pageHeading">View the Pokédex</h2>
     </div>
-    
+
     <main>
-    <!-- Pokémon Grid Section -->
-    <div class="pokemon-grid">
-       
-        <div class="pokemon-card" onclick="openDetailsPage('clefairy', 35)">
-            <img src="images/clefairy.png" alt="Clefairy">
-            <span class="pokemon-number">#000</span>
-            <h3>Clefairy</h3>
+        <div class="pokemon-grid">
+            <!-- Pokémon cards dynamically generated -->
         </div>
-
-        <div class="pokemon-card" onclick="openDetailsPage('combee', 1)">
-            <img src="images/combee.png" alt="Combee">
-            <span class="pokemon-number">#000</span>
-            <h3>Combee</h3>
+        <div class="load-more">
+            <button>More</button>
         </div>
-
-        <div class="pokemon-card" onclick="openDetailsPage('cherubi', 2)">
-            <img src="images/cherubi.png" alt="Cherubi">
-            <span class="pokemon-number">#000</span>
-            <h3>Cherubi</h3>
-        </div>
-
-        <div class="pokemon-card" onclick="openDetailsPage('cresselia', 3)">
-            <img src="images/cresselia.png" alt="Cresselia">
-            <span class="pokemon-number">#000</span>
-            <h3>Cresselia</h3>
-        </div>
-
-        <div class="pokemon-card" onclick="openDetailsPage('goldeen', 4)">
-            <img src="images/goldeen.png" alt="Goldeen">
-            <span class="pokemon-number">#000</span>
-            <h3>Goldeen</h3>
-        </div>
-
-        <div class="pokemon-card" onclick="openDetailsPage('lopunny', 5)">
-            <img src="images/lopunny.png" alt="Lopunny">
-            <span class="pokemon-number">#000</span>
-            <h3>Lopunny</h3>
-        </div>
-
-        <div class="pokemon-card" onclick="openDetailsPage('meganium', 6)">
-            <img src="images/meganium.png" alt="Meganium">
-            <span class="pokemon-number">#000</span>
-            <h3>Meganium</h3>
-        </div>
-        
-        <div class="pokemon-card" onclick="openDetailsPage('clefairy', 35)">
-            <img src="images/clefairy.png" alt="Clefairy">
-            <span class="pokemon-number">#000</span>
-            <h3>Clefairy</h3>
-        </div>
-
-        <div class="pokemon-card" onclick="openDetailsPage('combee', 1)">
-            <img src="images/combee.png" alt="Combee">
-            <span class="pokemon-number">#000</span>
-            <h3>Combee</h3>
-        </div>
-
-        <div class="pokemon-card" onclick="openDetailsPage('cherubi', 2)">
-            <img src="images/cherubi.png" alt="Cherubi">
-            <span class="pokemon-number">#000</span>
-            <h3>Cherubi</h3>
-        </div>
-
-        <div class="pokemon-card" onclick="openDetailsPage('cresselia', 3)">
-            <img src="images/cresselia.png" alt="Cresselia">
-            <span class="pokemon-number">#000</span>
-            <h3>Cresselia</h3>
-        </div>
-
-        <div class="pokemon-card" onclick="openDetailsPage('goldeen', 4)">
-            <img src="images/goldeen.png" alt="Goldeen">
-            <span class="pokemon-number">#000</span>
-            <h3>Goldeen</h3>
-        </div>
-
-        <div class="pokemon-card" onclick="openDetailsPage('lopunny', 5)">
-            <img src="images/lopunny.png" alt="Lopunny">
-            <span class="pokemon-number">#000</span>
-            <h3>Lopunny</h3>
-        </div>
-
-        <div class="pokemon-card" onclick="openDetailsPage('meganium', 6)">
-            <img src="images/meganium.png" alt="Meganium">
-            <span class="pokemon-number">#000</span>
-            <h3>Meganium</h3>
-        </div>
-        
-        <div class="pokemon-card" onclick="openDetailsPage('clefairy', 35)">
-            <img src="images/clefairy.png" alt="Clefairy">
-            <span class="pokemon-number">#000</span>
-            <h3>Clefairy</h3>
-        </div>
-
-        <div class="pokemon-card" onclick="openDetailsPage('combee', 1)">
-            <img src="images/combee.png" alt="Combee">
-            <span class="pokemon-number">#000</span>
-            <h3>Combee</h3>
-        </div>
-
-        <div class="pokemon-card" onclick="openDetailsPage('cherubi', 2)">
-            <img src="images/cherubi.png" alt="Cherubi">
-            <span class="pokemon-number">#000</span>
-            <h3>Cherubi</h3>
-        </div>
-
-        <div class="pokemon-card" onclick="openDetailsPage('cresselia', 3)">
-            <img src="images/cresselia.png" alt="Cresselia">
-            <span class="pokemon-number">#000</span>
-            <h3>Cresselia</h3>
-        </div>
-
-        <div class="pokemon-card" onclick="openDetailsPage('goldeen', 4)">
-            <img src="images/goldeen.png" alt="Goldeen">
-            <span class="pokemon-number">#000</span>
-            <h3>Goldeen</h3>
-        </div>
-
-        <div class="pokemon-card" onclick="openDetailsPage('lopunny', 5)">
-            <img src="images/lopunny.png" alt="Lopunny">
-            <span class="pokemon-number">#000</span>
-            <h3>Lopunny</h3>
-        </div>
-        
-       <!-- "More" Button -->
-       <div class="load-more">
-        <button onclick="loadMorePokemon()">More</button>
-    </div>
-        
-</main>
+    </main>
 
     <!-- Pokémon Details Modal -->
-<div id="pokemonModal" class="modal">
-    <div class="modal-content">
-        <span class="close-button" onclick="closeModal()">×</span>
-        <h1 id="modalPokemonName">Clefairy</h1>
-        <img id="modalPokemonImage" src="images/clefairy.png" alt="Clefairy">
-        <span class="pokemon-type">Fairy</span>
+    <div id="pokemonModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeModal()">×</span>
+            <h1 id="modalPokemonName">Clefairy</h1>
+            <img id="modalPokemonImage" src="images/clefairy.png" alt="Clefairy">
+            <span class="pokemon-type"></span>
 
-        <h2>About</h2>
-        <div class="pokemon-info">
-            <div><strong>Weight:</strong> <span id="modalPokemonWeight">16.5 lbs</span></div>
-            <div><strong>Height:</strong> <span id="modalPokemonHeight">0.6m</span></div>
-            <div><strong>Moves:</strong> <span id="modalPokemonMoves">Cute Charm, Magic Guard</span></div>
-        </div>
+            <h2>About</h2>
+            <div class="pokemon-info">
+                <span class="pokemon-type"></span>
+                <div><strong>Weight:</strong> <span id="modalPokemonWeight">16.5 lbs</span></div>
+                <div><strong>Height:</strong> <span id="modalPokemonHeight">0.6m</span></div>
+                <div><strong>Moves:</strong> <span id="modalPokemonMoves">Cute Charm, Magic Guard</span></div>
+                <button id="catchButton">Catch</button>
+            </div>
 
-        <p id="modalPokemonDescription">On nights with a full moon, Clefairy gather from all over and dance. Bathing in moonlight makes them float.</p>
+            <p id="modalPokemonDescription">On nights with a full moon, Clefairy gather from all over and dance. Bathing in moonlight makes them float.</p>
 
-        <h2>Base Stats</h2>
-        <div id="modalPokemonStats" class="pokemon-stats">
-            <!-- Stat bars will be populated dynamically -->
+            <h2>Base Stats</h2>
+            <div id="modalPokemonStats" class="pokemon-stats">
+                <!-- Stat bars will be populated dynamically -->
+            </div>
         </div>
     </div>
-</div>
 
-<script src="script.js"></script>
+    <div id="notificationModal" class="notification-modal" style="display: none;">
+        <div class="notification-content">
+            <p id="notificationMessage">Placeholder message</p>
+            <button id="closeNotification" class="close-notification">×</button>
+        </div>
+    </div>
 
+    <script src="script.js"></script>
 </body>
 </html>

@@ -129,9 +129,9 @@ document.querySelector(".load-more button").addEventListener("click", () => {
 document.getElementById("searchButton").addEventListener("click", async () => {
     const searchTerm = document.getElementById("search").value.toLowerCase();
     const pokemonGrid = document.querySelector(".pokemon-grid");
+    const loadMoreButton = document.querySelector(".load-more button");
 
-    // Clear the current Pokémon grid
-    pokemonGrid.innerHTML = "";
+    pokemonGrid.innerHTML = ""; // Clear the grid
 
     try {
         // Fetch Pokémon by name or number
@@ -152,9 +152,23 @@ document.getElementById("searchButton").addEventListener("click", async () => {
 
         // Reset offset to avoid conflicts with pagination
         offset = 0;
+
+        // Hide "Load More" button for search results
+        loadMoreButton.style.display = "none";
     } catch (error) {
         // Display error message if Pokémon not found
         pokemonGrid.innerHTML = `<p>Pokémon not found. Please try another search.</p>`;
+
+        // Adjust "Load More" button to provide a way back to full list
+        loadMoreButton.textContent = "Back";
+        loadMoreButton.style.display = "block";
+        loadMoreButton.onclick = () => {
+            document.getElementById("search").value = ""; // Clear search input
+            loadMoreButton.textContent = "More"; // Reset button text
+            loadMoreButton.style.display = "block"; // Show "More" button
+            offset = 0; // Reset offset
+            renderPokemon(true); // Reload Pokémon grid
+        };
     }
 });
 
@@ -167,43 +181,6 @@ document.getElementById("search").addEventListener("keypress", function (e) {
 });
 
 // Handle "More" button when no Pokémon are found
-document.getElementById("searchButton").addEventListener("click", async () => {
-    const searchTerm = document.getElementById("search").value.toLowerCase();
-    const pokemonGrid = document.querySelector(".pokemon-grid");
-    const loadMoreButton = document.querySelector(".load-more button");
-
-    pokemonGrid.innerHTML = ""; // Clear the grid
-
-    try {
-        // Fetch Pokémon by name or number
-        const response = await fetch(`${API_URL}/${searchTerm}`);
-        const pokemonData = await response.json();
-
-        // Create a Pokémon card for the result
-        const card = document.createElement("div");
-        card.classList.add("pokemon-card");
-        card.innerHTML = `
-            <img src="${pokemonData.sprites.other['official-artwork'].front_default}" alt="${pokemonData.name}">
-            <span class="pokemon-number">#${pokemonData.id.toString().padStart(3, '0')}</span>
-            <h3>${pokemonData.name.charAt(0).toUpperCase() + pokemonData.name.slice(1)}</h3>
-        `;
-        card.addEventListener("click", () => openModal(pokemonData));
-        pokemonGrid.appendChild(card);
-
-    } catch (error) {
-        // If no Pokémon found, show message and replace "More" with "Back"
-        pokemonGrid.innerHTML = `<p>Pokémon not found. Please try another search.</p>`;
-        loadMoreButton.textContent = "Back";
-
-        loadMoreButton.onclick = () => {
-            document.getElementById("search").value = ""; // Clear search input
-            loadMoreButton.textContent = "More"; // Reset button text
-            loadMoreButton.style.display = "block"; // Show "More" button
-            offset = 0; // Reset offset
-            renderPokemon(true); // Reload Pokémon grid
-        };
-    }
-});
 
 // Open Modal
 function openModal(details) {
@@ -256,3 +233,4 @@ document.getElementById("closeNotification").addEventListener("click", () => {
     const notificationModal = document.getElementById("notificationModal");
     notificationModal.style.display = "none";
 });
+

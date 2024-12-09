@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="https://use.typekit.net/veu7apn.css">
     <title>Pokedex</title>
 </head>
+
 <body>
     <header>
         <!-- Logo and Search Area -->
@@ -53,7 +55,7 @@
     <div id="pokemonModal" class="modal">
         <div class="modal-content">
             <span class="close-button" onclick="closeModal()">×</span>
-            <h1 id="modalPokemonName">Clefairy</h1>
+            <h1 id="modalPokemonName"></h1>
             <img id="modalPokemonImage" src="images/clefairy.png" alt="Clefairy">
             <span class="pokemon-type"></span>
 
@@ -66,7 +68,8 @@
                 <button id="catchButton">Catch</button>
             </div>
 
-            <p id="modalPokemonDescription">On nights with a full moon, Clefairy gather from all over and dance. Bathing in moonlight makes them float.</p>
+            <p id="modalPokemonDescription">On nights with a full moon, Clefairy gather from all over and dance. Bathing
+                in moonlight makes them float.</p>
 
             <h2>Base Stats</h2>
             <div id="modalPokemonStats" class="pokemon-stats">
@@ -82,6 +85,20 @@
         </div>
     </div>
 
+    <div class="favourites-modal" style="display: none;">
+        <div class="favourites-modal-header">
+            <h2>Favourites <img src="images/star-solid.svg" alt="Star Icon" id="favouritesStarIcon" /></h2>
+            <button class="favourites-modal-close">×</button>
+        </div>
+        <div class="favourites-modal-content">
+            <!-- Favorite Pokémon cards will be dynamically added here -->
+        </div>
+    </div>
+
+
+
+
     <script src="script.js"></script>
 </body>
+
 </html>
